@@ -384,4 +384,13 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.tags__container-wrapper > div:nth-child(6) {
+  grid-column: 2/span 1;
+}
+.tags__container-wrapper > div:nth-child(7) {
+  grid-column: 3/span 1;
+}
+.tags__container-wrapper > div:nth-child(8) {
+  grid-column: 4/span 1;
 }/*# sourceMappingURL=styles.css.map */
