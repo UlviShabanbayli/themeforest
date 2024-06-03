@@ -1,0 +1,13 @@
+@forward "./base/reset";
+@forward "./utills/helpers";
+@forward "./component/buttons";
+@forward "./utills/variables";
+@forward "./utills/mixins";
+
+@forward "./layouts/background";
+@forward "./layouts/header";
+@forward "./layouts/hero";
+@forward "./layouts/fetured";
+@forward "./layouts/tags";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");

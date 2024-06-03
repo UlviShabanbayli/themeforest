@@ -1,0 +1,182 @@
+@use "../utills/variables" as *;
+@use "../utills/mixins" as *;
+
+.fetured {
+  margin-top: 64px;
+
+  &__container {
+    @include Flex($direction: column, $gap: 32px, $items: center);
+
+    h2 {
+      text-align: center;
+      font-size: 20px;
+      color: $white;
+    }
+
+    &-grid {
+      @include Grid($columns: 4fr 3fr, $rows: repeat(4, 1fr), $gap: 20px);
+
+      &__itemMain {
+        grid-row: 1 / -1;
+        padding: 24px;
+        background-color: $dark-gray;
+        border-radius: $border-r-default;
+
+        @include Flex($direction: column, $gap: 32px, $items: flex-start);
+
+        &-imgWrapper {
+          border-radius: $border-r-default;
+          overflow: hidden;
+          img {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .btn_link-travel {
+          border: 1px solid #e10689;
+          background-color: #e1068925;
+        }
+
+        .btn_link-travel:hover {
+          background-color: #e1068948;
+        }
+
+        &-link {
+          font-size: 40px;
+          font-weight: 700;
+          text-decoration: none;
+          letter-spacing: 1px;
+          color: white;
+          background: linear-gradient(
+            to right,
+            $gradient-color-one,
+            $gradient-color-two
+          );
+          background-size: 0 2px;
+          background-position: 0 98%;
+          background-repeat: no-repeat;
+          transition: background-size 0.5s cubic-bezier(0.2, 0.63, 0.36, 1);
+
+          &:hover {
+            background-size: 100% 2px;
+          }
+        }
+
+        &-descr {
+          color: $light-gray;
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 30px;
+        }
+
+        &-wrapper {
+          @include Flex($items: center, $justify: center, $gap: 12px);
+
+          div {
+            border-radius: $border-r-full;
+            overflow: hidden;
+            border: 2px solid transparent;
+            z-index: 20;
+            position: relative;
+            transition: all 0.2s;
+
+            &:hover {
+              border-color: $gradient-color-two;
+            }
+
+            img {
+              display: block;
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          div:nth-child(2) {
+            transform: translateX(-45%);
+            z-index: 10;
+          }
+
+          i,
+          p {
+            display: block;
+            color: $white;
+          }
+        }
+      }
+
+      &__item {
+        @include Flex($gap: 16px, $items: flex-start);
+        background-color: $dark-gray;
+        padding: 24px;
+        border-radius: $border-r-default;
+
+        div:first-child {
+          flex: 1;
+          border-radius: $border-r-default;
+          overflow: hidden;
+
+          img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 10 / 9;
+            object-fit: cover;
+          }
+        }
+
+        div:last-child {
+          flex: 2;
+          @include Flex($direction: column, $gap: 12px, $items: flex-start);
+
+          .btn_lifestyle {
+            border: 1px solid #4d60ff;
+            background-color: #4d5fff2d;
+          }
+
+          .btn_lifestyle:hover {
+            background-color: #4d5fff5e;
+          }
+
+          .btn_health {
+            border: 1px solid #1cbf2e;
+            background-color: #1cbf2f22;
+          }
+
+          .btn_health:hover {
+            background-color: #1cbf2f4f;
+          }
+          .btn_technology {
+            border: 1px solid #f18408;
+            background-color: #f1840826;
+          }
+
+          .btn_technology:hover {
+            background-color: #f1840862;
+          }
+
+          .fetured__container-grid__item-link {
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 1px;
+            color: white;
+            background: linear-gradient(
+              to right,
+              $gradient-color-one,
+              $gradient-color-two
+            );
+            background-size: 0 2px;
+            background-position: 0 98%;
+            background-repeat: no-repeat;
+            transition: background-size 0.5s cubic-bezier(0.2, 0.63, 0.36, 1);
+
+            &:hover {
+              background-size: 100% 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

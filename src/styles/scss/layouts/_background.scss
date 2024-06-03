@@ -1,0 +1,51 @@
+.cover-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 150vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #100f15;
+  z-index: -1;
+
+  mask-image: linear-gradient(180deg, #000 80%, rgba(0, 0, 0, 0.701) 100%);
+  mask-image: linear-gradient(
+    180deg,
+    #000 80%,
+    rgba(176, 174, 174, 0.833) 100%
+  );
+}
+
+.cover-bg > svg:first-child {
+  fill: none;
+  position: absolute;
+  // width: 140%;
+  stroke: #f1f1f117;
+  opacity: 0.3;
+  z-index: -10;
+}
+
+.cover-bg > svg:nth-child(2) {
+  width: 100vw;
+  aspect-ratio: 31 / 26;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 10;
+}
+
+.cover-bg > svg:last-child {
+  width: 100vw;
+  aspect-ratio: 85 / 73;
+  position: absolute;
+  right: -45vw;
+  top: 0;
+  height: 1855px;
+  opacity: 1;
+  z-index: 10;
+}

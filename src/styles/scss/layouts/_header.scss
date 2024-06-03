@@ -1,0 +1,45 @@
+@use "../utills/variables" as *;
+@use "../utills/mixins" as *;
+@use "../component/buttons" as *;
+
+.header {
+  &__container {
+    max-width: 1392px;
+    width: 100%;
+    margin: 24px auto 80px;
+
+    @include Flex($justify: space-between, $items: center);
+
+    &-nav {
+      @include Flex($gap: 36px, $items: center);
+
+      ul {
+        list-style: none;
+
+        @include Flex($gap: 24px);
+
+        li {
+          a {
+            text-decoration: none;
+            color: $light-gray;
+          }
+        }
+      }
+    }
+
+    &-register {
+      @include Flex($items: center, $gap: 16px);
+
+      i,
+      a {
+        color: $light-gray;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      i:hover {
+        color: $blue;
+      }
+    }
+  }
+}

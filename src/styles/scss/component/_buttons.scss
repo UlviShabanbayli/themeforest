@@ -1,0 +1,16 @@
+@use "../utills/variables" as *;
+
+.btn {
+  color: $white;
+  display: block;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: $border-r-big;
+  background-image: $gradient-primary;
+  font-weight: 900;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
