@@ -55,6 +55,79 @@ body {
   transition: all 0.3s;
 }
 
+.btn__post {
+  padding: 4px 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 48px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#nature {
+  border: 1px solid #fd94ff;
+  background-color: rgba(253, 148, 255, 0.2);
+}
+
+#nature:hover {
+  background-color: rgba(253, 148, 255, 0.4);
+}
+
+#travel {
+  border: 1px solid #e00489;
+  background-color: rgba(224, 4, 137, 0.2);
+}
+
+#travel:hover {
+  background-color: rgba(224, 4, 137, 0.4);
+}
+
+#food {
+  border: 1px solid #b33ade;
+  background-color: rgba(179, 58, 222, 0.2);
+}
+
+#food:hover {
+  background-color: rgba(179, 58, 222, 0.4);
+}
+
+#lifestyle {
+  border: 1px solid #4d60ff;
+  background-color: rgba(77, 96, 255, 0.2);
+}
+
+#lifestyle:hover {
+  background-color: rgba(77, 96, 255, 0.4);
+}
+
+#inspiration {
+  border: 1px solid rgb(5, 186, 245);
+  background-color: rgba(5, 186, 245, 0.2);
+}
+
+#inspiration:hover {
+  background-color: rgba(5, 186, 245, 0.4);
+}
+
+#technology {
+  border: 1px solid #f18408;
+  background-color: rgba(241, 132, 8, 0.2);
+}
+
+#technology:hover {
+  background-color: rgba(241, 132, 8, 0.4);
+}
+
+#health {
+  border: 1px solid #1cbf2e;
+  background-color: rgba(28, 191, 46, 0.2);
+}
+
+#health:hover {
+  background-color: rgba(28, 191, 46, 0.4);
+}
+
 .btn {
   color: #fff;
   display: block;
@@ -210,6 +283,7 @@ body {
   padding: 24px;
   background-color: rgb(23, 23, 28);
   border-radius: 16px;
+  box-shadow: inset 0 0 1px rgb(128, 128, 128);
   display: flex;
   align-items: flex-start;
   gap: 32px;
@@ -291,6 +365,7 @@ body {
   background-color: rgb(23, 23, 28);
   padding: 24px;
   border-radius: 16px;
+  box-shadow: inset 0 0 1px rgb(128, 128, 128);
 }
 .fetured__container-grid__item div:first-child {
   flex: 1;
@@ -349,7 +424,8 @@ body {
 }
 
 .tags {
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-bottom: 120px;
 }
 .tags__container-heading {
   color: #fff;
@@ -367,10 +443,15 @@ body {
   padding: 16px;
   border-radius: 48px;
   background-color: rgb(23, 23, 28);
-  box-shadow: inset 4px 0 0 10px rgb(23, 23, 28);
+  box-shadow: inset 0 0 1px rgb(128, 128, 128);
+  transition: all 0.2s;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.tags__container-wrapper > div:hover {
+  box-shadow: inset 0 0 2px rgb(182, 28, 255);
 }
 .tags__container-wrapper > div:not(:last-child) > div:first-child {
   overflow: hidden;
@@ -385,6 +466,17 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.tags__container-wrapper > div:not(:last-child) > div:last-child {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.tags__container-wrapper > div:not(:last-child) > div:last-child h4 {
+  color: #fff;
+}
+.tags__container-wrapper > div:not(:last-child) > div:last-child p {
+  color: rgb(212, 212, 212);
+}
 .tags__container-wrapper > div:nth-child(6) {
   grid-column: 2/span 1;
 }
@@ -393,4 +485,188 @@ body {
 }
 .tags__container-wrapper > div:nth-child(8) {
   grid-column: 4/span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tags__container-wrapper > div:nth-child(8):hover {
+  background-color: rgb(182, 28, 255);
+}
+.tags__container-wrapper > div:nth-child(8):hover > div > i {
+  transform: translateX(8px);
+}
+.tags__container-wrapper > div:nth-child(8) div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+.tags__container-wrapper > div:nth-child(8) div i {
+  transition: all 0.3s;
+}
+
+.cards__container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.cards__container-grid__item {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px;
+  background-color: rgb(23, 23, 28);
+  box-shadow: inset 0 0 1px rgb(128, 128, 128);
+  border-radius: 16px;
+}
+.cards__container-grid__item > div:first-child {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cards__container-grid__item > div:first-child img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards__container-grid__item > div:last-child {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-direction: column;
+}
+.cards__container-grid__item > div:last-child > .card__header > a {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: rgb(212, 212, 212);
+  background: linear-gradient(to right, rgb(33, 93, 238), rgb(182, 28, 255));
+  background-size: 0 2px;
+  background-position: 0 98%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s cubic-bezier(0.2, 0.63, 0.36, 1);
+}
+.cards__container-grid__item > div:last-child > .card__header > a:hover {
+  background-size: 100% 2px;
+}
+.cards__container-grid__item > div:last-child > .descr {
+  color: rgb(212, 212, 212);
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.cards__container-grid__item > div:last-child > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cards__container-grid__item > div:last-child > div > div:first-child {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.cards__container-grid__item > div:last-child > div > div:first-child:hover {
+  border-color: rgb(182, 28, 255);
+}
+.cards__container-grid__item > div:last-child > div > div:first-child img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards__container-grid__item > div:last-child > div > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(212, 212, 212);
+}
+
+.cla {
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+.cla__container-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(30deg, rgb(33, 93, 238), rgb(182, 28, 255));
+  padding: 64px;
+  border-radius: 16px;
+}
+.cla__container-form > div {
+  flex: 1 1 50%;
+  max-width: 630px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+.cla__container-form > div > h3 {
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+.cla__container-form > div > p {
+  font-size: 20px;
+  line-height: 32px;
+  color: #fff;
+}
+.cla__container-form > form {
+  flex: 1 1 300px;
+  max-width: 450px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 32px;
+  border-radius: 16px;
+  position: relative;
+}
+.cla__container-form > form > input {
+  background-color: #fff;
+  border: 1px solid #28272c;
+  box-shadow: none;
+  height: 48px;
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  border-radius: 28px;
+  outline: none;
+  transition: all 0.2s;
+}
+.cla__container-form > form > button {
+  color: #fff;
+  background: #000;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  vertical-align: middle;
+  padding: 0 32px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 48px;
+  border: none;
+  transition: all 0.25s;
+  align-items: center;
+}
+.cla__container-form > form > input:focus {
+  transform: scale(0.99);
+}
+.cla__container-form > form > input:invalid {
+  border-color: red;
 }/*# sourceMappingURL=styles.css.map */

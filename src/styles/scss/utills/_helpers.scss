@@ -49,3 +49,70 @@
   border-radius: $border-r-medium;
   transition: all 0.3s;
 }
+
+.btn__post {
+  padding: 4px 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: $border-r-big;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#nature {
+  border: 1px solid #fd94ff;
+  background-color: rgba(253, 148, 255, 0.2);
+}
+#nature:hover {
+  background-color: rgba(253, 148, 255, 0.4);
+}
+
+#travel {
+  border: 1px solid #e00489;
+  background-color: rgba(224, 4, 137, 0.2);
+}
+
+#travel:hover {
+  background-color: rgba(224, 4, 137, 0.4);
+}
+
+#food {
+  border: 1px solid #b33ade;
+  background-color: rgba(179, 58, 222, 0.2);
+}
+#food:hover {
+  background-color: rgba(179, 58, 222, 0.4);
+}
+
+#lifestyle {
+  border: 1px solid #4d60ff;
+  background-color: rgba(77, 96, 255, 0.2);
+}
+#lifestyle:hover {
+  background-color: rgba(77, 96, 255, 0.4);
+}
+
+#inspiration {
+  border: 1px solid rgb(5, 186, 245);
+  background-color: rgba(5, 186, 245, 0.2);
+}
+#inspiration:hover {
+  background-color: rgba(5, 186, 245, 0.4);
+}
+
+#technology {
+  border: 1px solid #f18408;
+  background-color: rgba(241, 132, 8, 0.2);
+}
+#technology:hover {
+  background-color: rgba(241, 132, 8, 0.4);
+}
+
+#health {
+  border: 1px solid #1cbf2e;
+  background-color: rgba(28, 191, 46, 0.2);
+}
+#health:hover {
+  background-color: rgba(28, 191, 46, 0.4);
+}

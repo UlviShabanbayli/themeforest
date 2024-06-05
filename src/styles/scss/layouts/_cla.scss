@@ -1,0 +1,87 @@
+@use "../utills/variables" as *;
+@use "../utills/mixins" as *;
+
+.cla {
+  margin-top: 80px;
+  margin-bottom: 120px;
+  &__container {
+    &-form {
+      @include Flex($justify: space-between, $items: center);
+      background-image: $gradient-primary;
+      padding: 64px;
+      border-radius: $border-r-default;
+
+      > div {
+        flex: 1 1 50%;
+        max-width: 630px;
+        @include Flex($items: flex-start, $direction: column, $gap: 20px);
+
+        > h3 {
+          font-size: 40px;
+          line-height: 52px;
+          letter-spacing: 0.5px;
+          color: $white;
+        }
+        > p {
+          font-size: 20px;
+          line-height: 32px;
+          color: $white;
+        }
+      }
+      > form {
+        flex: 1 1 300px;
+        max-width: 450px;
+
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 32px;
+        border-radius: $border-r-default;
+        position: relative;
+
+        > input {
+          background-color: $white;
+          border: 1px solid #28272c;
+          box-shadow: none;
+          height: 48px;
+          width: 100%;
+          padding: 0 2rem;
+          margin-bottom: 1.5rem;
+          font-size: 1rem;
+          font-weight: 500;
+          color: $black;
+          border-radius: 28px;
+          outline: none;
+          transition: all 0.2s;
+        }
+
+        > button {
+          color: $white;
+          background: $black;
+          width: 100%;
+          display: inline-block;
+          white-space: nowrap;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 700;
+          vertical-align: middle;
+          padding: 0 32px;
+          height: 48px;
+          line-height: 48px;
+          border-radius: $border-r-big;
+          border: none;
+          transition: all 0.25s;
+          align-items: center;
+        }
+
+        > input:focus {
+          transform: scale(0.99);
+        }
+
+        > input:invalid {
+          border-color: red;
+        }
+      }
+    }
+  }
+}

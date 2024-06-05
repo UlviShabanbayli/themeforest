@@ -2,7 +2,8 @@
 @use "../utills/mixins" as *;
 
 .tags {
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-bottom: 120px;
   &__container {
     &-heading {
       color: $white;
@@ -18,8 +19,15 @@
         padding: 16px;
         border-radius: $border-r-big;
         background-color: $dark-gray;
-        box-shadow: inset 4px 0 0 10px $dark-gray;
+        box-shadow: inset 0 0 1px $gray;
+        transition: all 0.2s;
+        cursor: pointer;
+
         @include Flex($items: center, $gap: 12px);
+
+        &:hover {
+          box-shadow: inset 0 0 2px $gradient-color-two;
+        }
       }
 
       > div:not(:last-child) {
@@ -35,6 +43,15 @@
             object-fit: cover;
           }
         }
+        > div:last-child {
+          @include Flex($direction: column, $gap: 12px);
+          h4 {
+            color: $white;
+          }
+          p {
+            color: $light-gray;
+          }
+        }
       }
 
       > div:nth-child(6) {
@@ -45,6 +62,23 @@
       }
       > div:nth-child(8) {
         grid-column: 4 / span 1;
+        @include Flex($justify: center, $items: center);
+
+        &:hover {
+          background-color: $gradient-color-two;
+        }
+        &:hover > div > i {
+          transform: translateX(8px);
+        }
+        div {
+          @include Flex($items: center, $justify: center, $gap: 20px);
+          color: $white;
+          font-size: 18px;
+
+          i {
+            transition: all 0.3s;
+          }
+        }
       }
     }
   }

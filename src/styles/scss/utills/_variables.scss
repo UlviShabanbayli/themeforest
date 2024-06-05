@@ -2,6 +2,7 @@
 $white: #fff;
 $black: #000;
 $light-gray: rgb(212, 212, 212);
+$gray: rgb(128, 128, 128);
 $dark-gray: rgb(23, 23, 28);
 $blue: rgb(25, 25, 178);
 $btn_lifestyle: #4d60ff;
@@ -9,8 +10,10 @@ $btn_health: #1cbf2e;
 $btn_technology: #f18408;
 
 $gradient-color-one: rgb(33, 93, 238);
+$gradient-color-three: rgba(33, 93, 238, 0);
 $gradient-color-one-hover: rgba(33, 95, 238, 0.9);
 $gradient-color-two: rgb(182, 28, 255);
+$gradient-color-four: rgba(182, 28, 255, 0);
 $gradient-color-two-hover: rgba(182, 28, 255, 0.9);
 
 // Gradients
@@ -18,6 +21,11 @@ $gradient-primary: linear-gradient(
   30deg,
   $gradient-color-one,
   $gradient-color-two
+);
+$gradient-secondary: linear-gradient(
+  30deg,
+  $gradient-color-three,
+  $gradient-color-four
 );
 $gradient-hover: linear-gradient(
   30deg,
